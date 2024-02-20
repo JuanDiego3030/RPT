@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Roca, Papel y Tijeras</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Juego de Roca, Papel y Tijeras</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="selectGameMode('multiplayer')">Multijugador</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="selectGameMode('singleplayer')">Jugar con la Máquina</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="mt-4 text-center">Empecemos el juego!!!</h1>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Jugador 1</h5>
+                        <label for="player1">Elige: </label>
+                        <input type="text" id="player1" class="form-control" placeholder="R, P, o T">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Jugador 2</h5>
+                        <label for="player2">Elige: </label>
+                        <input type="text" id="player2" class="form-control" placeholder="R, P, o T">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col text-center">
+                <button onclick="play()" class="btn btn-primary center">Jugar</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
